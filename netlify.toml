@@ -1,0 +1,10 @@
+[build]
+publish = "/"
+command = ""
+
+Redirects / Rewrites (optional, helpful for SPAs)
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
