@@ -1858,6 +1858,29 @@ max-height: 2000px; /* 給予足夠大的上限值 */
 }
 
 
+/* 🚫 徹底移除抓取手勢，回歸標準選取狀態 */
+.description-card-body, 
+.transport-card-body, 
+.schedule-card-themed {
+    cursor: default !important; /* 改回一般箭頭 */
+    user-select: text !important; /* 確保文字可選取 */
+    -webkit-user-select: text !important;
+}
+
+/* 讓標題與備註內容在滑鼠移上去時顯示「文字選取」游標 */
+.description-card-body h4, 
+.description-card-body div, 
+.transport-card-body .text-sm {
+    cursor: text !important;
+}
+
+/* 僅保留按鈕與連結為手指狀態 */
+.description-card-body button, 
+.description-card-body a, 
+.transport-card-body button {
+    cursor: pointer !important;
+}	
+
 </style>
 </head>
 <body>
@@ -19455,4 +19478,5 @@ window.toggleTransportDetails = function(btn, id) {
 
     </script>
 </body>
+
 </html>
